@@ -17,6 +17,6 @@ class HomeController extends Controller {
     public function __invoke() {
         $parse = Parser::all()->toArray();
 
-        return view('welcome', ['parse' => $parse]);
+        return view('home', ['parse' => $parse]);
     }
 }

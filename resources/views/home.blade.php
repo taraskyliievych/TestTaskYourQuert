@@ -60,7 +60,7 @@
             <td>{{ ($item['changes_in_movies']) }}</td>
             <td>{{ ($item['changes_in_new_movies']) }}</td>
             <td>{{ ($item['changes_in_old_movies']) }}</td>
-            <td>{{ ($item['parse_time']) }}</td>
+            <td>{{ ($item['parse_time']) }} seconds</td>
         </tr>
     @endforeach
 
