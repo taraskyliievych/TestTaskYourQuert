@@ -97,7 +97,6 @@ class Helper {
             $cast = Cast::where('name', $castName)->first();
 
             if (empty($cast)) {
-
                 $cast = new Cast();
 
                 $cast->name = $castName;
@@ -108,7 +107,7 @@ class Helper {
             $castIds[] = $cast->id;
         }
 
-        return Genre::find($castIds);
+        return Cast::find($castIds);
     }
 
     /**

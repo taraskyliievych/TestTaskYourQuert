@@ -2,18 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Language;
-use App\Models\Movie;
-use App\Models\New_movies;
-use App\Models\Old_movies;
-use App\Services\Helper;
-use App\Services\MovieHelper;
+use App\Jobs\ProcessMovieParser;
 use Illuminate\Http\Request;
 
-class MovieController extends Controller
-{
-    public function create(Request $request)
-    {
-        MovieHelper::createMovie($request);
+/**
+ * Class MovieController
+ *
+ * @package App\Http\Controllers
+ */
+class MovieController extends Controller {
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return string
+     */
+    public function create(Request $request) {
+        $fileName = time() . '.' . $request->file->getClientOriginalExtension();
+        $request->file->move(public_path('temporaryCSV'), $fileName);
+
+        $this->dispatch(new ProcessMovieParser($fileName));
+
+        return 'ProcessMovieParser job Created';
     }
 }

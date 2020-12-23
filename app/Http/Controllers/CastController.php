@@ -2,14 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cast;
-use App\Services\CastHelper;
+use App\Jobs\ProcessCastParser;
 use Illuminate\Http\Request;
 
-class CastController extends Controller
-{
-    public function create(Request $request)
-    {
-        CastHelper::createCast($request);
+/**
+ * Class CastController
+ *
+ * @package App\Http\Controllers
+ */
+class CastController extends Controller {
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     */
+    public function create(Request $request) {
+        $fileName = time() . '.' . $request->file->extension();
+        $request->file->move(public_path('temporaryCSV'), $fileName);
+
+        ProcessCastParser::dispatch($fileName);
+
+        echo 'ProcessCastParser job Created';
     }
 }

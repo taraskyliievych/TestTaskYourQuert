@@ -24,6 +24,7 @@ class Parser extends Model
         'changes_in_languages',
         'changes_in_movies',
         'changes_in_new_movies',
-        'changes_in_old_movies'
+        'changes_in_old_movies',
+        'parse_time'
     ];
 }

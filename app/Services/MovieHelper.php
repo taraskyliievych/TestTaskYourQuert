@@ -5,7 +5,6 @@ namespace App\Services;
 use App\Models\Movie;
 use App\Models\New_movies;
 use App\Models\Old_movies;
-use Illuminate\Http\Request;
 
 /**
  * Class MovieHelper
@@ -46,10 +45,8 @@ class MovieHelper {
             $movie->description = $request['description'];
             $movie->avg_vote = $request['avg_vote'];
             $movie->votes = $request['votes'];
-            $movie->reviews_from_users = $request['reviews_fr_users'];
-            $movie->reviews_from_critics = $request['reviews_fr_critics'];
-            $movie->is_usa = $request['is_usa'];
-            $movie->is_europe = $request['is_europe'];
+            $movie->reviews_from_users = $request['reviews_from_users'];
+            $movie->reviews_from_critics = $request['reviews_from_critics'];
             $movie->is_top = $request['avg_vote'] >= 8;
             $movie->is_usa = NULL !== (array_search('USA', $request['country']));
             $movie->is_europe = Helper::isEurope($request['country']);
