@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CastController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\TopMoviesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', HomeController::class);
+
+Route::get('/top', TopMoviesController::class);
+
+Route::post('/movie/create', [MovieController::class, 'create']);
+
+Route::post('/cast/create', [CastController::class, 'create']);
+
+
+Route::get('/upload', function () {
+    return view('uploadCSV');
 });
-
-Route::get('/movie/create', [MovieController::class, 'create']);
-
