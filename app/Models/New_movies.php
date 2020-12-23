@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cast extends Model
+class New_movies extends Model
 {
     use HasFactory;
 
@@ -17,14 +17,7 @@ class Cast extends Model
     protected $fillable = [
         'id',
         'updated_at',
-        'imdb_name_id',
-        'name',
-        'height',
-        'bio',
-        'date_of_birth',
-        'place_of_birth',
-        'children',
-        'is_usa',
-        'is_europe'
+        'movie_id',
+        'year',
     ];
 }
