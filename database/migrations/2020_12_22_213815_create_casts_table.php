@@ -16,15 +16,15 @@ class CreateCastsTable extends Migration
         Schema::create('casts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('imdb_name_id');
+            $table->string('imdb_name_id')->nullable();
             $table->string('name');
-            $table->integer('height');
-            $table->longText('bio');
-            $table->date('date_of_birth');
-            $table->string('place_of_birth');
-            $table->integer('children');
-            $table->boolean('is_usa');
-            $table->boolean('is_europe');
+            $table->integer('height')->nullable();
+            $table->longText('bio')->nullable();
+            $table->date('date_of_birth')->nullable();
+            $table->string('place_of_birth')->nullable();
+            $table->integer('children')->nullable();
+            $table->boolean('is_usa')->nullable();
+            $table->boolean('is_europe')->nullable();
         });
     }
 

@@ -17,7 +17,7 @@ class CreateOldMoviesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('movie_id');
-            $table->year('year');
+            $table->integer('year');
         });
     }
 

@@ -17,13 +17,14 @@ class CreateParsersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('items_in_file');
-            $table->integer('changes_in_casts');
-            $table->integer('changes_in_countries');
-            $table->integer('changes_in_genres');
-            $table->integer('changes_in_languages');
-            $table->integer('changes_in_movies');
-            $table->integer('changes_in_new_movies');
-            $table->integer('changes_in_old_movies');
+            $table->integer('changes_in_casts')->default(0);
+            $table->integer('changes_in_countries')->default(0);
+            $table->integer('changes_in_genres')->default(0);
+            $table->integer('changes_in_languages')->default(0);;
+            $table->integer('changes_in_movies')->default(0);
+            $table->integer('changes_in_new_movies')->default(0);
+            $table->integer('changes_in_old_movies')->default(0);
+            $table->integer('parse_time')->default(0);
         });
     }
 
