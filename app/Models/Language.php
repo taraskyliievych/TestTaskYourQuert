@@ -19,4 +19,9 @@ class Language extends Model
         'updated_at',
         'name',
     ];
+
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class, 'language_movie');
+    }
 }

@@ -36,4 +36,24 @@ class Movie extends Model
         'is_europe',
         'is_top'
     ];
+
+    public function countries()
+    {
+        return $this->belongsToMany(Country::class, 'country_movie');
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class, 'genre_movie');
+    }
+
+    public function casts()
+    {
+        return $this->belongsToMany(Cast::class, 'cast_movie');
+    }
+
+    public function languages()
+    {
+        return $this->belongsToMany(Language::class, 'language_movie');
+    }
 }

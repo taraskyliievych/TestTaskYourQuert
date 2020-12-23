@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56abc574c9c50fc6e4b7f5ef2a76cd50",
+    "content-hash": "1cb25fe8c212a4f9630f4c7db44c9e8d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -841,6 +841,60 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "laracasts/generators",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
+                "reference": "0b8b3d300cc948217f7547502b6de5db6fbafa70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/0b8b3d300cc948217f7547502b6de5db6fbafa70",
+                "reference": "0b8b3d300cc948217f7547502b6de5db6fbafa70",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~6.0|~7.0|~8.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laracasts\\Generators\\GeneratorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\Generators\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                },
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabaciu.ro"
+                }
+            ],
+            "description": "Advanced Laravel generators, that include schema information.",
+            "keywords": [
+                "generators",
+                "laravel"
+            ],
+            "time": "2020-09-10T13:49:13+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.20.1",
             "source": {
@@ -1161,6 +1215,84 @@
                 }
             ],
             "time": "2020-10-31T13:49:32+00:00"
+        },
+        {
+            "name": "league/csv",
+            "version": "9.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "f28da6e483bf979bac10e2add384c90ae9983e4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/f28da6e483bf979bac10e2add384c90ae9983e4e",
+                "reference": "f28da6e483bf979bac10e2add384c90ae9983e4e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpstan/phpstan": "^0.12.0",
+                "phpstan/phpstan-phpunit": "^0.12.0",
+                "phpstan/phpstan-strict-rules": "^0.12.0",
+                "phpunit/phpunit": "^8.5"
+            },
+            "suggest": {
+                "ext-dom": "Required to use the XMLConverter and or the HTMLConverter classes",
+                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
+            "keywords": [
+                "convert",
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "transform",
+                "write"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-10T19:40:30+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2219,6 +2351,55 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "sameer-shelavale/php-countries-array",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sameer-shelavale/php-countries-array.git",
+                "reference": "5f868e30ea694c5be4d7d09a58f019fd07146347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sameer-shelavale/php-countries-array/zipball/5f868e30ea694c5be4d7d09a58f019fd07146347",
+                "reference": "5f868e30ea694c5be4d7d09a58f019fd07146347",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SameerShelavale\\PhpCountriesArray\\": "src/"
+                },
+                "psr-4": {
+                    "SameerShelavale\\PhpCountriesArray\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sameer Shelavale",
+                    "email": "samiirds@gmail.com"
+                }
+            ],
+            "description": "PHP class to get array of countries names with ISO_3166-1 alpha-2, alpha-3, numeric codes, ISD codes and continent",
+            "keywords": [
+                "ISD Codes",
+                "ISO_3166-1",
+                "List of countries",
+                "PHP countries array",
+                "alpha-2",
+                "alpha-3",
+                "continent",
+                "countries array"
+            ],
+            "time": "2019-02-18T09:26:26+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

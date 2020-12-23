@@ -19,4 +19,9 @@ class Genre extends Model
         'updated_at',
         'name',
     ];
+
+    public function movies()
+    {
+        return $this->belongsToMany(Movie::class, 'genre_movie');
+    }
 }

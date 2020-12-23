@@ -27,4 +27,9 @@ class Cast extends Model
         'is_usa',
         'is_europe'
     ];
+
+    public function casts()
+    {
+        return $this->belongsToMany(Movie::class, 'cast_movie');
+    }
 }
